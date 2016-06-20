@@ -15,8 +15,8 @@
 		330A11CC1D0E96A100D52C09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330A11CA1D0E96A100D52C09 /* LaunchScreen.storyboard */; };
 		330A11D71D0E96A100D52C09 /* progressLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A11D61D0E96A100D52C09 /* progressLineTests.m */; };
 		330A11E21D0E96A100D52C09 /* progressLineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A11E11D0E96A100D52C09 /* progressLineUITests.m */; };
-		330A11F21D0E97CC00D52C09 /* GCProgressLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A11F11D0E97CC00D52C09 /* GCProgressLine.m */; };
 		330A11F51D10D52200D52C09 /* progressLineDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A11F41D10D52200D52C09 /* progressLineDemo.m */; };
+		33BDFF4A1D17D1DA0000158D /* GCProgressLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BDFF491D17D1DA0000158D /* GCProgressLine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		330A11DD1D0E96A100D52C09 /* progressLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = progressLineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		330A11E11D0E96A100D52C09 /* progressLineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = progressLineUITests.m; sourceTree = "<group>"; };
 		330A11E31D0E96A100D52C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		330A11F01D0E97CC00D52C09 /* GCProgressLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCProgressLine.h; sourceTree = "<group>"; };
-		330A11F11D0E97CC00D52C09 /* GCProgressLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCProgressLine.m; sourceTree = "<group>"; };
 		330A11F31D10D52200D52C09 /* progressLineDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = progressLineDemo.h; sourceTree = "<group>"; };
 		330A11F41D10D52200D52C09 /* progressLineDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = progressLineDemo.m; sourceTree = "<group>"; };
+		33BDFF481D17D1DA0000158D /* GCProgressLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCProgressLine.h; path = GCProgressLine/GCProgressLine.h; sourceTree = SOURCE_ROOT; };
+		33BDFF491D17D1DA0000158D /* GCProgressLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCProgressLine.m; path = GCProgressLine/GCProgressLine.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +152,8 @@
 		330A11EF1D0E97CC00D52C09 /* GCProgressLine */ = {
 			isa = PBXGroup;
 			children = (
-				330A11F01D0E97CC00D52C09 /* GCProgressLine.h */,
-				330A11F11D0E97CC00D52C09 /* GCProgressLine.m */,
+				33BDFF481D17D1DA0000158D /* GCProgressLine.h */,
+				33BDFF491D17D1DA0000158D /* GCProgressLine.m */,
 			);
 			path = GCProgressLine;
 			sourceTree = "<group>";
@@ -290,8 +290,8 @@
 			files = (
 				330A11C41D0E96A100D52C09 /* ViewController.m in Sources */,
 				330A11F51D10D52200D52C09 /* progressLineDemo.m in Sources */,
+				33BDFF4A1D17D1DA0000158D /* GCProgressLine.m in Sources */,
 				330A11C11D0E96A100D52C09 /* AppDelegate.m in Sources */,
-				330A11F21D0E97CC00D52C09 /* GCProgressLine.m in Sources */,
 				330A11BE1D0E96A100D52C09 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

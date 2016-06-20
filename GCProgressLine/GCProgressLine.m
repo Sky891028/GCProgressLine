@@ -1,8 +1,7 @@
 //
 //  GCProgressLine.m
-//  purchasingManager
 //
-//  Created by Sky on 16/4/25.
+//  Created by Sky on 16/4/25. V：1.0.0
 //  Copyright © 2016年 郑州悉知. All rights reserved.
 //
 
@@ -35,7 +34,6 @@
 {
     if (!_progressView) {
         _progressView = [[UIView alloc] initWithFrame:CGRectZero];
-        _progressView.backgroundColor = [UIColor colorWithRed:0.973 green:0.745 blue:0.306 alpha:1.000];
         [self addSubview:self.progressView];
     }
     return _progressView;
@@ -47,9 +45,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        self.backgroundColor = [UIColor colorWithRed:0.937 green:0.958 blue:1.000 alpha:1.000];
-        
         [self _setHeightRestrictionOfFrame:frame.size.height];
     }
     return self;
@@ -93,21 +88,21 @@
 
 - (void)setProgressValue:(CGFloat)progressValue
 {
-    if (progressValue > _progressMaxValue) {
-        _progressValue = _progressMaxValue;
-    }else{
-        _progressValue  = progressValue;
-    }
-    
-    _rect_progressView.size.width = self.bounds.size.width*_progressValue/_progressMaxValue;
-    _rect_progressView.size.height = self.bounds.size.height;
-    
-    NSTimeInterval durationValue = (_progressValue/2.0) / _progressMaxValue + .5;
-    
-    [UIView animateWithDuration:durationValue animations:^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        self.progressView.frame = _rect_progressView;
-    }];
+        if (progressValue > _progressMaxValue) {
+            _progressValue = _progressMaxValue;
+        }else{
+            _progressValue  = progressValue;
+        }
+        _rect_progressView.size.width = self.bounds.size.width*_progressValue/_progressMaxValue;
+        _rect_progressView.size.height = self.bounds.size.height;
+        NSTimeInterval durationValue = (_progressValue/2.0) / _progressMaxValue + .5;
+        if (!self.progressView.frame.size.height) self.progressView.frame = CGRectMake(0, 0, 0, self.frame.size.height);
+        [UIView animateWithDuration:durationValue animations:^{
+            self.progressView.frame = _rect_progressView;
+        }];
+    });
 }
 
 
