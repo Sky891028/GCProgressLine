@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IgC-8y-nVU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DDu-uu-Dkf">
+            <objects>
+                <navigationController id="IgC-8y-nVU" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZFx-B6-IUY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uyg-qH-klS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qA-Ay-zkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="470"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29i-Yf-RyX">
+                                <rect key="frame" x="59" y="91" width="202" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="3Ym-Qq-KGk"/>
+                                </constraints>
+                                <state key="normal" title="progressLine"/>
+                                <connections>
+                                    <segue destination="0vY-SG-ag1" kind="push" id="vRN-nT-DPi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="29i-Yf-RyX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="Tds-18-NzV"/>
+                            <constraint firstItem="29i-Yf-RyX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="59" id="bDd-BO-9dp"/>
+                            <constraint firstAttribute="trailing" secondItem="29i-Yf-RyX" secondAttribute="trailing" constant="59" id="ygU-mT-AEh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mgf-fB-XYI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="479"/>
+        </scene>
+        <!--Progress Line Demo-->
+        <scene sceneID="l9j-jD-uU5">
+            <objects>
+                <viewController id="0vY-SG-ag1" customClass="progressLineDemo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oPE-ih-6uN"/>
+                        <viewControllerLayoutGuide type="bottom" id="tja-FI-jiT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4R3-CT-UrR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1c7-Ac-BL3" customClass="GCProgressLine">
+                                <rect key="frame" x="20" y="110" width="280" height="6"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="KXt-kc-LBQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMl-FW-NSd" customClass="GCProgressLine">
+                                <rect key="frame" x="20" y="156" width="280" height="10"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="F8C-Gn-wju"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4n-6K-4b9" customClass="GCProgressLine">
+                                <rect key="frame" x="20" y="206" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tQU-RE-7v7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lMl-FW-NSd" firstAttribute="leading" secondItem="4R3-CT-UrR" secondAttribute="leading" constant="20" id="1RL-sz-Gyv"/>
+                            <constraint firstAttribute="trailing" secondItem="lMl-FW-NSd" secondAttribute="trailing" constant="20" id="5If-dm-AhA"/>
+                            <constraint firstItem="1c7-Ac-BL3" firstAttribute="leading" secondItem="4R3-CT-UrR" secondAttribute="leading" constant="20" id="6YI-x3-hFX"/>
+                            <constraint firstItem="A4n-6K-4b9" firstAttribute="leading" secondItem="4R3-CT-UrR" secondAttribute="leading" constant="20" id="XSg-EB-XYY"/>
+                            <constraint firstItem="lMl-FW-NSd" firstAttribute="top" secondItem="1c7-Ac-BL3" secondAttribute="bottom" constant="40" id="al8-gL-6Ic"/>
+                            <constraint firstAttribute="trailing" secondItem="A4n-6K-4b9" secondAttribute="trailing" constant="20" id="p3M-sW-zx7"/>
+                            <constraint firstItem="1c7-Ac-BL3" firstAttribute="top" secondItem="oPE-ih-6uN" secondAttribute="bottom" constant="46" id="qgx-3c-GcM"/>
+                            <constraint firstAttribute="trailing" secondItem="1c7-Ac-BL3" secondAttribute="trailing" constant="20" id="rnE-zY-Dcm"/>
+                            <constraint firstItem="A4n-6K-4b9" firstAttribute="top" secondItem="lMl-FW-NSd" secondAttribute="bottom" constant="40" id="zCa-wJ-HD3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oUS-9B-g7f"/>
+                    <connections>
+                        <outlet property="progressLine1" destination="1c7-Ac-BL3" id="zsL-M7-kbP"/>
+                        <outlet property="progressLine2" destination="lMl-FW-NSd" id="sTY-dI-rNr"/>
+                        <outlet property="progressLine3" destination="A4n-6K-4b9" id="Ux9-56-gM5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UsL-W9-pUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="479"/>
+        </scene>
+    </scenes>
+</document>
